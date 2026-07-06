@@ -88,7 +88,7 @@ parser.add_argument('--vocab-file',
                     default='C:/Users/dengjiewen/PycharmProjects/Digital_SC/europarl/europarl_origin_cut/vocab.json', type=str)
 parser.add_argument('--bits', default=4, type=int, help='Please choose 1, 2, 4, 8,16bits')
 parser.add_argument('--quant', default='N2UQ_Symmetric', type=str, help='Please choose  N2UQ_Symmetric, N2UQ_Asymmetric, quant')
-parser.add_argument('--channel', default='Rayleigh', type=str, help='Please choose AWGN, Rayleigh, and Rician')
+parser.add_argument('--channel', default='AWGN', type=str, help='Please choose AWGN, Rayleigh, and Rician')
 parser.add_argument('--d-model', default=128, type=int)
 parser.add_argument('--dff', default=512, type=int)
 parser.add_argument('--num-layers', default=4, type=int)

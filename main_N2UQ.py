@@ -68,18 +68,11 @@ train_iterator = DataLoader(train_eur, batch_size=args.batch_size_train, num_wor
 test_eur = EurDataset('test')
 test_iterator = DataLoader(test_eur, batch_size=args.batch_size_test, num_workers=0,
                            pin_memory=True, collate_fn=collate_data)
-# SNR = [-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
+SNR = [-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
 # SNR = [14, 12, 10, 8, 6, 4, 2, 0, -2, -4, -6, -8]
 
 if args.channel == 'AWGN':
     args.Test_epochs = 2
-    SNR = [10]
-# elif args.channel == 'Rayleigh':
-#     SNR = [0, 2, 4, 6, 8, 10, 12, 14]
-else:
-    SNR = [-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
-    # SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
-# SNR = [-3, 0, 3, 6, 9, 12, 15, 18]
 
 # Initialize logging and summary writer
 # base_exp_name = f"Rician_{args.network}/pr{args.ratio}_{args.bits}bits_{args.hessian_mode}"

@@ -148,15 +148,10 @@ if __name__ == '__main__':
     else:
         args.checkpoint_path = f"./HAP/out/{args.channel}_{args.network}/pr_{args.ratio}_{args.hessian_mode}/"# snr_-4_10/
     DSC_HAP = load_network(args.checkpoint_path)
-    # SNR = [-3, 0, 3, 6, 9, 12, 15, 18]
+    SNR = [-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
     if args.channel == 'AWGN':
         args.Test_epochs = 2
-        SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
-    elif args.channel == 'Rayleigh':
-        # SNR = [12, 14]
-        SNR = [0, 2, 4, 6, 8, 10, 12, 14]
-    else:
-        SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
+        # SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
     print('SRN: ',SNR)
     epochs = range(args.Test_epochs)
 

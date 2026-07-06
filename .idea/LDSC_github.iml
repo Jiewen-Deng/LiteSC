@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/runs/N2UQ/Rician_N2UQTransformer/pr0.5_4bits_trace_Test2ep/checkpoint" />
+    </content>
     <orderEntry type="jdk" jdkName="Digital_SC" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

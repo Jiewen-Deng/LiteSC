@@ -1,3 +1,0 @@
-python main_pretrain.py
-python main_HAP.py
-python main_N2UQ.py

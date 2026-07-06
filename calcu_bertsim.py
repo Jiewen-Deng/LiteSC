@@ -36,10 +36,9 @@ def save_results_to_file(PATH_FOLDER, SNR, mean_bertsimilarity):
     print(f'Results saved to {results_path}')
     return results_path
 
-SNR_list = [-4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
+SNR_list = [-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
 # SNR_list = [-8, -6, -4, -2]
 # epoch_range = [0,1,2]
-# SNR_list = [0]
 epoch_range = [0]
 # epoch_range = [0, 1, 2, 3, 4]
 bertsimilarity = np.zeros((len(epoch_range),len(SNR_list)))

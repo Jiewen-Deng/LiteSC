@@ -107,15 +107,10 @@ if __name__ == '__main__':
     start = time.time()
     args = parser.parse_args()
     args.checkpoint_path = f'pretrain/{args.channel}_{args.quant}/{args.bits}bits'#plus60epoch， snr_train_5-10, increase
-    # SNR = [18]
-    # SNR = [3, 12]
+    SNR = [-8, -6, -4, -2, 0, 2, 4, 6, 8, 10, 12, 14]
     if args.channel == 'AWGN':
         args.Test_epochs = 2
-        SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
-    elif args.channel == 'Rayleigh':
-        SNR = [0, 2, 4, 6, 8, 10, 12, 14]
-    else:
-        SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
+        # SNR = [-4, -2, 0, 2, 4, 6, 8, 10]
     print('SRN: ',SNR)
     # SNR = [-3, 0, 3, 6, 9, 12, 15, 18]
     epochs = range(args.Test_epochs)
