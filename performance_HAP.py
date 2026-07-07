@@ -103,16 +103,6 @@ def load_network(PATH):
             model_paths.append((os.path.join(PATH, fn), idx))
     model_paths.sort(key=lambda x: x[1])  # sort the image by the idx
     model_path, _ = model_paths[-1]
-    # # 在加载前创建模块映射
-    # import sys
-    # try:
-    #     # 尝试导入新模块
-    #     new_module = __import__('Lite_DeepSC.utils_quantization')
-    #     # 将旧模块名映射到新模块
-    #     sys.modules['Lite_DeepSC.utils_quantization_same'] = new_module
-    # except ImportError:
-    #     pass
-
     model_tar = torch.load(model_path)
     DSC_HAP = model_tar['net'].to(device)
     print(f'model loaded from  {model_path}')

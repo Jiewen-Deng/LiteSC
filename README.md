@@ -6,25 +6,32 @@ Emerging edge-intelligence applications, such as virtual/augmented reality and t
 
 
    ```bash
-   pip install -r requirements.txt
    git clone https://github.com/Jiewen-Deng/LiteSC
+   pip install -r requirements.txt
    ```
 
 ## Quick Start
 
-1. Pretraining the quantization-based digital semantic transceiver:
+1. Pretraining the quantization-based digital semantic communication system:
    ```bash
    python main_pretrain.py
    ```
 
-
+   \# Evaluate the system with BLEU score:
+   ```bash
+   python performance_pretrain.py
+   ```
+   
 2. Perform Hessian-aware pruning on pretrained digital semantic system:
    ```bash
    python main_HAP.py
    ```
+   \# Evaluate the system with BLEU score:
+   ```bash
+   python performance_HAP.py
+   ```
 
-
-3. Perform nonuniform-to-uniform quantization on HAPed semantic system:
+3. Perform nonuniform-to-uniform quantization on HAPed semantic system and evaluate the system with BLEU score and semantic similarity score:
    ```bash
    python main_N2UQ.py
    ```
